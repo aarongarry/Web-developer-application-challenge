@@ -1,0 +1,163 @@
+
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, "Segoe UI", Roboto, Arial;
+  background: #ffffff;
+  color: #0b1220;
+}
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 12px 16px;
+}
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: #002E5D; 
+  border-bottom: 1px solid #001e40;
+  color: #ffffff;
+}
+.nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+}
+.brand {
+  font-weight: 700;
+  color: #ffffff;
+  text-decoration: none;
+}
+.nav-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+.nav-links a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+}
+.nav-links a:hover {
+  background: #001e40;
+}
+.nav-links a.is-active {
+  background: #001e40;
+  font-weight: 600;
+}
+.site-footer {
+  border-top: 1px solid #e6eef7;
+  background: #f7fafc;
+  margin-top: 40px;
+}
+.footer-inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 18px 16px;
+  color: #42526b;
+  font-size: 0.9rem;
+}
+.footer-small {
+  color: #6b7b94;
+}
+a:focus-visible {
+  outline: 3px solid #ffffff;
+  outline-offset: 2px;
+}
+.crop {
+  width: 100%;
+  height: 600px;
+  overflow: hidden;
+}
+.main-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;   
+  display: block;
+}
+
+/* note styles */
+.notes {
+  display: grid;
+  gap: 16px;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: start;
+}
+.note {
+  background: #fff9d6;
+  color: #0b1220;
+  border: 1px solid #e7dca6;
+  border-radius: 12px;
+  padding: 16px 18px 18px;
+  box-shadow: 0 10px 25px rgba(0,0,0,.08);
+  transition: transform 180ms ease, box-shadow 180ms ease, opacity 300ms ease;
+  position: relative;
+}
+.note:hover {
+  box-shadow: 0 14px 35px rgba(0,0,0,.12);
+  transform: translateY(-2px);
+}
+.note h3 { margin: 0 0 6px; font-size: 1.1rem; 
+}
+.muted { color: #6b7b94; font-size: .95rem; 
+}
+.section-pad { padding: 28px 16px; 
+}
+.section-gap { margin-top: 18px; }
+
+/* About page */
+.faculty-grid {
+  display: grid;
+  gap: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  justify-items: center;  
+}
+.faculty-card.note {
+  width: 160px;            
+  padding: 8px;
+  font-size: 0.8rem;       
+  text-align: center;      
+}
+.faculty-photo {
+  width: 100%;
+  aspect-ratio: 1 / 1;    
+  object-fit: cover;
+  border-radius: 6px;
+  margin-bottom: 6px;
+}
+.faculty-card h3 {
+  font-size: 1rem;
+  margin: 4px 0;
+}
+.meta { font-size: 0.75rem; }
+.faculty-card .contact {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+.faculty-card:hover .contact {
+  opacity: 1;
+  max-height: 100px;
+}
+
+/* audition page */
+.form-row { display:grid; gap:12px; grid-template-columns:1fr 1fr; }
+label { display:block; font-weight:600; margin:.2rem 0 .25rem; }
+input, select, textarea {
+  width:100%; padding:.65rem .7rem;
+  border:1px solid #cbd5e1; border-radius:10px;
+}
+input:focus-visible, select:focus-visible, textarea:focus-visible {
+  outline:2px solid #002E5D; outline-offset: 2px;
+}
+button[type="submit"]{
+  background:#002E5D; color:#fff; border:0;
+  padding:.7rem 1rem; border-radius:999px; cursor:pointer;
+}
+button[type="submit"]:hover{ background:#001e40; }
